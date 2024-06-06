@@ -1,0 +1,12 @@
+@use "../global" as g;
+
+html {
+  scroll-padding-top: 60px;
+}
+html,
+body {
+  color: g.$base-color;
+  font-family: g.$base-font;
+  font-size: g.$fz-sm;
+  font-weight: g.$fw-base;
+}

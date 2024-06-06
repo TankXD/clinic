@@ -1,0 +1,21 @@
+@use "../global/" as g;
+
+.p-top-button {
+  position: fixed;
+  width: 52px;
+  height: 52px;
+  bottom: 97px;
+  right: 10px;
+  @include g.mq(md) {
+    bottom: 80px;
+    right: 20px;
+  }
+  @include g.mq(xl) {
+    bottom: 40px;
+  }
+  a {
+    display: inline-block;
+    img {
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@use "../global/" as g;
+
+.l-breadcrumb {
+  margin-top: 9px;
+  padding-left: g.$padding-inline-sp;
+  @include g.mq(md) {
+    padding-left: g.$padding-inline-pc;
+  }
+  @include g.mq(lg) {
+    padding-left: 90px;
+  }
+}

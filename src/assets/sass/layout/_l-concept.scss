@@ -1,0 +1,10 @@
+@use "../global/" as g;
+
+.l-concept {
+  margin-top: 60px;
+  padding-top: 106px;
+  @include g.mq(md) {
+    padding-top: 180px;
+    padding-bottom: 108px;
+  }
+}

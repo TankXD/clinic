@@ -1,0 +1,35 @@
+@use "../global" as g;
+
+.p-reserve-link {
+  display: none;
+
+  @include g.mq(xl) {
+    width: 92px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    position: fixed;
+    z-index: g.$zindex-header;
+    right: 0;
+    top: 180px;
+    background: g.$color-blue;
+    border-radius: 20px 0px 0px 20px;
+    transition: background 0.2s ease;
+    img {
+      width: 52px;
+      height: 32px;
+    }
+    p {
+      color: #fff;
+
+      font-weight: g.$fw-bold;
+      line-height: 130%;
+    }
+    &:hover {
+      background: g.$color-d-blue;
+    }
+  }
+}

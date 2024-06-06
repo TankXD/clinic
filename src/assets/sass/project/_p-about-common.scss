@@ -1,0 +1,119 @@
+@use "../global/" as g;
+
+// 스크롤 시 살짝 v
+#about-common,
+#about-gallery {
+  scroll-margin-top: 60px;
+}
+
+// policy
+.p-about-policy {
+  margin-top: 43px;
+  padding-top: 105px;
+  @include g.mq(md) {
+    margin-top: 60px;
+    padding-top: 214px;
+    padding-bottom: 92px;
+  }
+}
+
+// feature
+
+.p-about-feature {
+  margin-top: 100px;
+
+  .p-about-common__img {
+    margin-right: 0;
+    margin-left: 41px;
+    text-align: right;
+    img {
+      border-radius: 20px 0px 0px 20px;
+    }
+  }
+  .p-about-common__content {
+    @include g.mq(md) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+// 공통 common
+.p-about-common {
+}
+
+.p-about-common__content {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include g.mq(md) {
+    flex-direction: row;
+    gap: 40px;
+  }
+  @include g.mq(lg) {
+    gap: 95px;
+  }
+}
+
+.p-about-common__img {
+  margin-top: 37px;
+  margin-right: 41px;
+  @include g.mq(md) {
+    margin-top: 0;
+    margin-right: 0;
+    width: 50vw;
+  }
+  img {
+    border-radius: 0px 20px 20px 0px;
+    width: 89.06666666666667vw;
+    @include g.mq(md) {
+      object-fit: cover;
+      width: 100%;
+      height: 438px;
+    }
+  }
+}
+
+.p-about-common__body {
+  padding-inline: g.$padding-inline-sp;
+  @include g.mq(md) {
+    padding-inline: 0;
+
+    width: 40vw;
+  }
+  @include g.mq(lg) {
+    width: 31.8vw;
+  }
+}
+
+.p-about-common__subtitle {
+  color: g.$color-blue;
+  font-size: g.$fz-xxs;
+  font-weight: g.$fw-bold;
+  letter-spacing: 1.1px;
+  @include g.mq(md) {
+    font-size: g.$fz-md;
+    letter-spacing: 1.4px;
+  }
+}
+
+.p-about-common__title {
+  margin-top: 15px;
+  font-size: g.$fz-lg;
+  font-weight: g.$fw-bold;
+  line-height: 32px;
+  letter-spacing: 1.6px;
+  @include g.mq(md) {
+    margin-top: 24px;
+    font-size: g.$fz-xxl;
+    line-height: 44px;
+    letter-spacing: 2.24px;
+  }
+}
+
+.p-about-common__description {
+  margin-top: 26px;
+  line-height: 24px;
+  @include g.mq(md) {
+    margin-top: 36px;
+  }
+}

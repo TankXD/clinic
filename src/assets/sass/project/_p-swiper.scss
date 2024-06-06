@@ -1,0 +1,103 @@
+@use "../global/" as g;
+
+// swiper slide
+.p-swiper {
+  .p-swiper-wrap {
+  }
+
+  .p-swiper-slide {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background: rgba(0, 0, 0, 0.1);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .p-swiper__img {
+    img {
+      object-position: left;
+      width: 100%;
+      height: 447px;
+      object-fit: cover;
+      @include g.mq(md) {
+        height: auto;
+        object-fit: 1160/520;
+      }
+    }
+  }
+
+  .p-swiper__text-img {
+    position: absolute;
+    bottom: 38px;
+    left: 20px;
+    img {
+    }
+    @include g.mq(md) {
+      bottom: 55px;
+      left: 62px;
+    }
+  }
+}
+
+// swiper btn, pagination
+.l-slider {
+  .p-swiper-prev-btn,
+  .p-swiper-next-btn {
+    width: 48px;
+    height: 48px;
+
+    //기본 화살표는,::after에 글자로 만들어진 거기 때문에
+    //color: transparent;로 해서 안보이게할 수 있다.
+    color: transparent;
+    @include g.mq(md) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .p-swiper-prev-btn {
+    left: 0px;
+    background-image: url("../img/slider/arrow-left.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include g.mq(md) {
+      left: 33px;
+    }
+  }
+  .p-swiper-next-btn {
+    right: 0px;
+    background-image: url("../img/slider/arrow-right.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include g.mq(md) {
+      right: 33px;
+    }
+  }
+
+  .p-swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    bottom: 13px;
+    left: 3px;
+    width: 30px;
+    @include g.mq(md) {
+      left: 22px;
+    }
+    @include g.mq(lg) {
+      gap: 10px;
+      left: 32px;
+    }
+  }
+}

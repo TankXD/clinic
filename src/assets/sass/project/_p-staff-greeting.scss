@@ -1,0 +1,114 @@
+@use "../global/" as g;
+
+#staff-doctor {
+  scroll-margin-top: 100px;
+}
+
+.p-greeting__body {
+  margin-top: 36px;
+  @include g.mq(md) {
+    display: flex;
+    gap: 6.25vw;
+    margin-top: 60px;
+  }
+}
+
+.p-greeting__content {
+  @include g.mq(md) {
+    flex: 1;
+  }
+}
+
+.p-greeting__img {
+  margin-top: 40px;
+  @include g.mq(md) {
+    margin-top: 3px;
+    flex: 1;
+  }
+  img {
+    border-radius: 20px;
+    width: 100%;
+    height: 446px;
+    object-fit: cover;
+    @include g.mq(md) {
+      height: 613px;
+    }
+  }
+}
+
+.p-greeting__sub-title {
+  font-size: g.$fz-lg;
+  font-weight: g.$fw-bold;
+  line-height: 32px;
+  letter-spacing: 1.6px;
+  @include g.mq(md) {
+    font-size: 28px;
+    line-height: 44px;
+    letter-spacing: 2.24px;
+  }
+}
+
+.p-greeting__description {
+  margin-top: 28px;
+  line-height: 24px; /* 171.429% */
+  @include g.mq(md) {
+    margin-top: 36px;
+  }
+}
+
+.p-greeting__description2 {
+  margin-top: 34px;
+  text-align: right;
+  line-height: 24px; /* 171.429% */
+  @include g.mq(md) {
+    margin-top: 15px;
+  }
+}
+
+.p-greeting-info {
+  margin-top: 40px;
+  @include g.mq(md) {
+    margin-top: 56px;
+  }
+}
+
+.p-greeting-career {
+}
+
+.p-greeting-career__sub-title {
+  font-size: 16px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid g.$color-gray;
+}
+
+.p-greeting-career__text-wrap {
+  margin-top: 14px;
+  display: flex;
+  gap: 15px;
+  &:nth-of-type(2) {
+    line-height: 22.54px;
+    @include g.mq(md) {
+      line-height: 24px;
+    }
+  }
+}
+
+.p-greeting-career__text {
+}
+
+.p-greeting-license {
+  margin-top: 38px;
+}
+
+.p-greeting-license__sub-title {
+  font-size: 16px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid g.$color-gray;
+}
+
+.p-greeting-license__text-wrap {
+  margin-top: 14px;
+}
+
+.p-greeting-license__text {
+}

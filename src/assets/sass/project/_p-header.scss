@@ -1,0 +1,293 @@
+@use "../global" as g;
+
+// header left
+.p-header__logo {
+  width: 270px;
+  height: 32px;
+  z-index: g.$zindex-drawer-btn;
+  position: relative;
+}
+
+// header right
+
+// header nav
+.p-header-nav {
+  height: inherit;
+  display: flex;
+  gap: 24px;
+  position: relative;
+}
+
+.p-header-nav__item {
+  height: inherit;
+}
+.p-header-nav__link {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: g.$fw-bold;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+  span {
+    font-size: g.$fz-xxs;
+    line-height: 18px;
+  }
+}
+
+// header tel
+.p-header-tel {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.p-header-tel__text {
+  font-size: g.$fz-xs;
+  line-height: 1;
+}
+
+.p-header-tel__number {
+  color: g.$color-blue;
+  text-align: center;
+  font-size: g.$fz-xxxl;
+  font-weight: g.$fw-bold;
+  line-height: 1;
+  margin-top: 4px;
+
+  img {
+    vertical-align: bottom;
+    margin-right: -4px;
+  }
+  span {
+    display: inline-block;
+    line-height: 1;
+  }
+}
+
+// header drawer button
+
+.p-header__drawer-button {
+  z-index: g.$zindex-drawer-btn;
+  position: relative;
+  width: 28px;
+  height: 16px;
+  @include g.mq(xl) {
+    display: none;
+  }
+}
+
+.is-open {
+  .p-header__drawer-button__bar {
+    background-color: white;
+
+    &:first-child {
+      //   top: 50%;
+      //   transform: rotate(-45deg) translateY(-50%);
+      top: 6px;
+      transform: rotate(-45deg);
+    }
+    &:nth-child(2) {
+      display: none;
+    }
+    &:last-child {
+      //   top: 50%;
+      //   transform: rotate(45deg) translateY(-50%);
+      bottom: 7px;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.p-header__drawer-button__bar {
+  transition: all 0.3s ease;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: g.$color-blue;
+  left: 0;
+  right: 0;
+  border-radius: 3px;
+  &:first-child {
+    top: 0;
+  }
+  &:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &:last-child {
+    bottom: 0;
+  }
+}
+
+// header drawer menu
+.p-header__drawer-menu {
+  position: fixed;
+  display: none;
+  z-index: g.$zindex-drawer-nav;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: g.$color-d-blue;
+}
+
+.p-header__drawer-list {
+  margin-top: 60px;
+  padding-top: 39px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-header__drawer-link {
+  display: flex;
+  align-items: center;
+  min-width: 255px;
+  padding-block: 15px;
+  position: relative;
+  border-bottom: 1px dashed white;
+  &:first-child {
+    border-top: 1px dashed white;
+  }
+  img {
+    width: 24px;
+    height: 24px;
+  }
+  span {
+    margin-left: 14px;
+    color: g.$color-white;
+  }
+  &::after {
+    background-image: url("../img/common/icon-right.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: 14px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+  }
+}
+
+// 각 item hover animation //
+.p-header-nav__link {
+  transition: all 0.3s ease;
+  &:hover {
+    svg path {
+      fill: g.$color-blue;
+    }
+    span {
+      color: g.$color-blue;
+    }
+  }
+}
+.p-header-nav__item.active {
+  svg path {
+    fill: g.$color-blue;
+  }
+  span {
+    color: g.$color-blue;
+  }
+}
+
+//////////////////////////
+
+// nav animation bar //
+
+.p-header-nav__item:not(.active) {
+  & ~ .animation-bar {
+    display: none;
+  }
+}
+.p-header-nav__item.active {
+  & ~ .animation-bar {
+    display: block;
+  }
+}
+
+.p-header-nav {
+  .animation-bar {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 2px;
+    bottom: 8px;
+    background-color: g.$color-blue;
+    transition: all 0.5s ease;
+  }
+}
+
+.p-header-nav__item:nth-child(1).active {
+  & ~ .animation-bar {
+    left: 8px;
+  }
+}
+
+.p-header-nav__item:nth-child(2).active {
+  & ~ .animation-bar {
+    left: 82px;
+  }
+}
+.p-header-nav__item:nth-child(3).active {
+  & ~ .animation-bar {
+    left: 160px;
+  }
+}
+.p-header-nav__item:nth-child(4).active {
+  & ~ .animation-bar {
+    left: 238px;
+  }
+}
+.p-header-nav__item:nth-child(5).active {
+  & ~ .animation-bar {
+    left: 334px;
+  }
+}
+.p-header-nav__item:nth-child(6).active {
+  & ~ .animation-bar {
+    left: 430px;
+  }
+}
+
+// hover시에 움직임이 더 중요하도록 (아래에 적어줘야 우선순위가 높아짐.)
+.p-header-nav__item:nth-child(1):hover {
+  & ~ .animation-bar {
+    left: 8px;
+  }
+}
+
+.p-header-nav__item:nth-child(2):hover {
+  & ~ .animation-bar {
+    left: 82px;
+  }
+}
+.p-header-nav__item:nth-child(3):hover {
+  & ~ .animation-bar {
+    left: 160px;
+  }
+}
+
+.p-header-nav__item:nth-child(4):hover {
+  & ~ .animation-bar {
+    left: 238px;
+  }
+}
+
+.p-header-nav__item:nth-child(5):hover {
+  & ~ .animation-bar {
+    left: 334px;
+  }
+}
+
+.p-header-nav__item:nth-child(6):hover {
+  & ~ .animation-bar {
+    left: 430px;
+  }
+}

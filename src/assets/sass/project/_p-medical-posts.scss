@@ -1,0 +1,105 @@
+@use "../global/" as g;
+
+.p-medical-inner {
+  padding-block: 27px 62px;
+  @include g.mq(md) {
+    padding-top: 0;
+  }
+}
+
+.p-medical__posts-wrap {
+  margin-top: 40px;
+
+  @include g.mq(md) {
+    margin-top: 60px;
+  }
+}
+
+.p-medical-post {
+  scroll-margin-top: 100px;
+  & + & {
+    margin-top: 40px;
+  }
+  border-radius: 20px;
+  background: #fff;
+  padding: 20px;
+  position: relative;
+  @include g.mq(md) {
+    //padding: 40px;
+    padding: 60px;
+  }
+  @include g.mq(lg) {
+    padding: 60px;
+  }
+}
+
+.p-medical-post__tag {
+  img {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    @include g.mq(md) {
+      right: 60px;
+    }
+  }
+}
+.p-medical-post__title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c2c2c2;
+  @include g.mq(md) {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 36px;
+  }
+}
+
+.p-medical-post__title {
+  font-size: g.$fz-lg;
+  font-weight: g.$fw-bold;
+  line-height: 28px; /* 140% */
+  letter-spacing: 1.6px;
+  @include g.mq(md) {
+    font-size: g.$fz-xxl;
+    letter-spacing: 2.24px;
+  }
+}
+
+.p-medical-post__sub-title {
+  color: g.$color-blue;
+  font-weight: g.$fw-bold;
+  letter-spacing: 1.12px;
+}
+
+.p-medical__post-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  gap: 16px;
+  @include g.mq(md) {
+    margin-top: 36px;
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+.p-medical-post__description {
+  line-height: 24px;
+  flex: 1;
+}
+
+.p-medical-post__img {
+  flex: 1;
+  @include g.mq(md) {
+    margin-top: 0;
+  }
+  img {
+    width: 100%;
+    min-height: 75%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+}

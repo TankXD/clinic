@@ -1,0 +1,20 @@
+@use "../global/" as g;
+
+// front page의 medical
+
+.l-medical {
+  margin-top: 97px;
+  @include g.mq(md) {
+    margin-top: 135px;
+  }
+}
+
+// page-medical
+
+.l-medical-body1,
+.l-medical-body2 {
+  margin-top: 100px;
+  @include g.mq(md) {
+    margin-top: 160px;
+  }
+}

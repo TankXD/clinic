@@ -1,0 +1,49 @@
+// base
+$base-font: "M PLUS Rounded 1c", sans-serif;
+$base-color: #393939;
+
+// inner width
+$inner-width-lg: 1000px;
+$inner-width-md: 966px;
+
+// inner padding
+$padding-inline-sp: 20px;
+$padding-inline-pc: 40px;
+$padding-inline-pc-l: 60px;
+
+// color
+$color-white: #ffffff;
+$color-blue: #1391e6;
+$color-d-blue: #0060a0;
+$color-l-blue: #dff1fd;
+$color-red: #ee5a6d;
+$color-gray: #888;
+
+// font-size
+$fz-xxs: 11px;
+$fz-xs: 12px;
+$fz-sm: 14px;
+$fz-md: 16px;
+$fz-lg: 20px;
+$fz-xl: 24px;
+$fz-xxl: 28px;
+$fz-xxxl: 32px;
+
+//font-weight
+$fw-base: 500;
+$fw-bold: 700;
+
+// breakpoint
+$breakpoints: (
+  sp: "not screen and (min-width : 768px)",
+  md: "screen and (min-width: 768px)",
+  lg: "screen and (min-width: 1000px)",
+  xl: "screen and (min-width: 1200px)",
+  xxl: "screen and (min-width: 1400px)",
+) !default;
+
+//z-index
+$zindex-header: 20;
+$zindex-drawer-btn: 60;
+$zindex-drawer-nav: 50;
+$zindex-footer-contact: 80;

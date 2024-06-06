@@ -1,0 +1,38 @@
+@use "../global" as g;
+
+.l-header {
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  z-index: g.$zindex-header;
+  background-color: #fff;
+  @include g.mq(md) {
+    height: 80px;
+  }
+}
+
+.l-header__inner {
+  padding-inline: g.$padding-inline-sp;
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include g.mq(md) {
+    padding-inline: g.$padding-inline-pc;
+  }
+}
+
+.l-header__right {
+  display: none;
+  @include g.mq(xl) {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    gap: 32px;
+  }
+}

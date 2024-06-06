@@ -1,0 +1,12 @@
+@use "../global/" as g;
+
+.l-recommend {
+  margin-top: 98px;
+  @include g.mq(md) {
+    text-align: center;
+    margin-top: 40px;
+  }
+  @include g.mq(lg) {
+    margin-top: 117px;
+  }
+}

@@ -1,0 +1,77 @@
+@use "../global/" as g;
+
+.p-medical-category__wrap {
+  & + & {
+    margin-top: 80px;
+    @include g.mq(md) {
+      margin-top: 78px;
+    }
+  }
+}
+
+.p-medical-category__title-wrap {
+  display: flex;
+}
+
+.p-medical-category__title {
+  font-size: g.$fz-lg;
+  font-weight: g.$fw-bold;
+  letter-spacing: 1.6px;
+  @include g.mq(md) {
+    font-size: g.$fz-xxl;
+    letter-spacing: 2.24px;
+  }
+}
+
+.p-medical-category__label {
+  margin-left: 24px;
+  border-radius: 24px;
+  padding-inline: 12px;
+  color: #fff;
+  font-weight: g.$fw-bold;
+  letter-spacing: 1.12px;
+  height: 35px;
+  line-height: 35px;
+  &.is-blue {
+    background-color: g.$color-blue;
+  }
+  &.is-red {
+    background-color: g.$color-red;
+  }
+}
+
+.p-medical-category__list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @include g.mq(md) {
+    margin-top: 29px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.p-medical-category__link {
+  padding-block: 14px;
+  color: g.$color-blue;
+  text-align: center;
+  font-size: g.$fz-lg;
+  font-weight: g.$fw-bold;
+  letter-spacing: 1.6px;
+
+  border-radius: 12px;
+  border: 1px solid g.$color-blue;
+
+  background: #fff;
+  transition: all 0.2s ease;
+  @include g.mq(md) {
+    font-size: g.$fz-xl;
+    letter-spacing: 1.92px;
+    padding: 17px 30px;
+  }
+  &:hover {
+    background-color: g.$color-blue;
+    color: #fff;
+  }
+}

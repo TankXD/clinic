@@ -1,0 +1,71 @@
+@use "../global/" as g;
+
+.p-footer-contact {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: g.$zindex-footer-contact;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  @include g.mq(xl) {
+    display: none;
+  }
+}
+.p-footer-contact__tel-wrap {
+  text-align: center;
+}
+
+.p-footer-contact__tel {
+  display: inline-block;
+  line-height: 1;
+  img {
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+  }
+  span {
+    margin-left: 4px;
+    color: g.$color-blue;
+    font-size: g.$fz-lg;
+    font-weight: g.$fw-bold;
+    display: inline-block;
+    line-height: 1;
+  }
+}
+
+.p-footer-contact__time {
+  font-size: 10px;
+  line-height: 1;
+}
+
+.p-footer-contact__btn {
+  width: 157px;
+  height: 47px;
+  border-radius: 8px;
+  background: g.$color-blue;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  padding-inline: 15px 20px;
+  color: #fff;
+  img {
+  }
+}
+
+.p-footer-contact__btn-text {
+  text-align: center;
+  font-weight: 700;
+  line-height: 1;
+  span:first-of-type {
+    font-size: 16px;
+  }
+  span:last-of-type {
+    font-size: 12px;
+  }
+}

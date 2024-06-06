@@ -1,0 +1,14 @@
+@use "../global/" as g;
+
+.l-info {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-inline: g.$padding-inline-sp;
+  position: relative;
+  z-index: 1;
+  @include g.mq(lg) {
+    flex-direction: row;
+    justify-content: center;
+    padding-inline: g.$padding-inline-pc-l;
+  }
+}

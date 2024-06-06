@@ -1,0 +1,86 @@
+@use "../global/" as g;
+
+.p-contact__text {
+  line-height: 24px;
+}
+
+//////////////////////////////
+
+.p-contact__title-wrap {
+  margin-top: 100px;
+  @include g.mq(md) {
+    margin-top: 150px;
+  }
+}
+
+.p-contact__title {
+  line-height: 28px; /* 140% */
+  letter-spacing: 1.6px;
+  @include g.mq(md) {
+    line-height: normal;
+    letter-spacing: 2.24px;
+  }
+}
+
+//////////////////////////////
+
+.p-contact-info {
+  &:nth-of-type(2) {
+    margin-top: 40px;
+  }
+}
+
+.p-contact-info__title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  @include g.mq(md) {
+    font-size: 28px;
+    letter-spacing: 2.24px;
+  }
+}
+
+.p-contact-info__tel-wrap {
+  margin-top: 20px;
+  display: inline-block;
+  text-align: center;
+  @include g.mq(md) {
+    margin-top: 24px;
+  }
+}
+
+.p-contact-info__tel {
+  display: inline-block;
+  height: 48px;
+  img {
+    vertical-align: baseline;
+    width: 28px;
+    height: 28px;
+  }
+  span {
+    margin-left: 3px;
+    display: inline-block;
+    color: #1391e6;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.64px;
+    @include g.mq(md) {
+      margin-left: 4px;
+      font-size: 32px;
+    }
+  }
+}
+
+.p-contact-info__time {
+  margin-top: -5px;
+  color: #1391e6;
+  font-size: 12px;
+}
+
+.p-contact-info__description {
+  margin-top: 20px;
+  line-height: 24px;
+  @include g.mq(md) {
+    margin-top: 24px;
+  }
+}

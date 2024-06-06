@@ -1,0 +1,26 @@
+@use "../global/" as g;
+
+.l-archive {
+  @include g.mq(md) {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.l-archive__articles {
+  max-width: 670px;
+  @include g.mq(md) {
+    flex-grow: 1;
+  }
+}
+
+.l-archive__sidebar {
+  @include g.mq(sp) {
+    margin-top: 100px;
+    max-width: 670px;
+  }
+  @include g.mq(md) {
+    min-width: 300px;
+    max-width: 300px;
+  }
+}

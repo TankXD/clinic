@@ -1,0 +1,41 @@
+@use "../global/" as g;
+.c-section-title-wrap {
+  text-align: center;
+}
+.c-section-title {
+  font-size: g.$fz-lg;
+  font-weight: g.$fw-bold;
+  letter-spacing: 1.6px;
+  position: relative;
+  display: inline-block;
+  @include g.mq(md) {
+    font-size: g.$fz-xxl;
+    letter-spacing: 2.24px;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    background: url("../img/common/title-deco.svg") no-repeat center center / contain;
+    width: 49px;
+    height: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include g.mq(md) {
+      width: 67px;
+      height: 20px;
+    }
+  }
+  &::before {
+    left: -65px;
+    @include g.mq(md) {
+      left: calc(-28px + -67px);
+    }
+  }
+  &::after {
+    right: -65px;
+    @include g.mq(md) {
+      right: calc(-28px + -67px);
+    }
+  }
+}

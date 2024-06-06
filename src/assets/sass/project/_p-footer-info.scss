@@ -1,0 +1,151 @@
+@use "../global/" as g;
+
+// footer info
+.p-footer__info {
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 20px;
+  @include g.mq(lg) {
+    padding: 40px 49px;
+    border-radius: 20px;
+    max-width: 1000px;
+    display: flex;
+    gap: 40px;
+  }
+}
+
+// footer info left (info)
+.p-footer-info__left {
+  max-width: 480px;
+  margin: 0 auto;
+  @include g.mq(md) {
+    max-width: 680px;
+  }
+}
+
+.p-footer-info__logo {
+  text-align: center;
+  img {
+    width: 309px;
+    @include g.mq(lg) {
+      width: 404px;
+    }
+  }
+}
+
+.p-footer-info__address {
+  margin-top: 11px;
+  text-align: center;
+  @include g.mq(lg) {
+    margin-top: 7px;
+  }
+  span {
+    margin-left: 14px;
+  }
+}
+
+.p-footer-info__tel {
+  margin-top: 21px;
+  text-align: center;
+  display: block;
+  img {
+    width: 28px;
+    height: 28px;
+    vertical-align: baseline;
+  }
+  span {
+    display: inline-block;
+    color: g.$color-blue;
+    font-size: 32px;
+    font-weight: g.$fw-bold;
+    line-height: 36px;
+    letter-spacing: -0.64px;
+  }
+  @include g.mq(lg) {
+    margin-top: 17px;
+    span {
+      font-size: 32px;
+      line-height: normal;
+      letter-spacing: -0.64px;
+      margin-left: 4px;
+    }
+  }
+}
+
+.p-footer-info__time {
+  margin-top: 3px;
+  text-align: center;
+  color: g.$color-blue;
+  font-size: g.$fz-xs;
+  @include g.mq(lg) {
+    margin-top: -5px;
+  }
+}
+
+.p-footer-info__btn-wrap {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  padding-inline: 20px;
+  @include g.mq(lg) {
+    gap: 20px;
+    padding-inline: 9px 8px;
+  }
+}
+.p-footer-info__btn {
+}
+
+.p-footer-info__time-table {
+  padding-inline: 10px;
+  margin-top: 20px;
+
+  img {
+    border-radius: 12px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  }
+  @include g.mq(md) {
+    margin-top: 30px;
+  }
+  @include g.mq(lg) {
+    padding-inline: 0;
+  }
+}
+
+// footer info right (map)
+.p-footer-info__right {
+  margin-top: 20px;
+  padding-inline: 20px;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  @include g.mq(md) {
+    max-width: 680px;
+    margin-top: 40px;
+  }
+  @include g.mq(lg) {
+    padding-inline: 0;
+    margin: 0;
+    max-width: 385px;
+    padding-block: 12px;
+  }
+}
+
+.p-footer-info__map {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//////////////////////
+// nav

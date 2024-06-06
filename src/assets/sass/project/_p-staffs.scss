@@ -1,0 +1,82 @@
+@use "../global/" as g;
+
+#staff-introduce {
+  scroll-margin-top: 100px;
+}
+
+.p-staffs__body {
+  margin-top: 36px;
+  @include g.mq(md) {
+    margin-top: 60px;
+  }
+}
+
+.p-staffs__sub-title {
+  font-size: 16px;
+  font-weight: g.$fw-bold;
+  letter-spacing: 1.28px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid g.$color-gray;
+}
+
+.p-staffs__card-wrap {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  @include g.mq(md) {
+    margin-top: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px;
+  }
+}
+
+.p-staffs__card {
+  @include g.mq(md) {
+    max-width: 280px;
+  }
+}
+
+.p-staffs__img {
+  img {
+    border-radius: 20px;
+  }
+}
+
+.p-staffs__nameWrap {
+  text-align: center;
+  margin-top: 16px;
+}
+.p-staffs__job {
+  font-size: g.$fz-xs;
+  letter-spacing: 0.96px;
+}
+
+.p-staffs__name {
+  margin-left: 12px;
+  font-size: 18px;
+  font-weight: g.$fw-bold;
+  letter-spacing: 1.44px;
+}
+
+.p-staffs__info-wrap {
+  margin-top: 17px;
+}
+
+.p-staffs__info {
+  border-bottom: 1px solid #fff;
+  display: flex;
+}
+
+.p-staffs__info--left {
+  background: g.$color-l-blue;
+  padding-left: 20px;
+  padding-block: 17px;
+  width: 140px;
+}
+
+.p-staffs__info--right {
+  margin-left: 20px;
+  padding-block: 17px 16px;
+}

@@ -1,0 +1,8 @@
+@use "../global/" as g;
+
+.l-main {
+  margin-top: 60px;
+  @include g.mq(md) {
+    margin-top: 80px;
+  }
+}

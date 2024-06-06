@@ -1,0 +1,26 @@
+@use "../global/" as g;
+
+.p-footer-bg-wave {
+  margin-top: 100px;
+  height: 32px;
+  position: relative;
+
+  @include g.mq(md) {
+    margin-top: 160px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 46px);
+    height: inherit;
+    bottom: 0;
+    left: -46px;
+    right: 0;
+    background: url("../img/common/wave-top.svg") repeat-x top center / cover;
+    @include g.mq(md) {
+      width: 100%;
+      left: 0;
+    }
+  }
+}

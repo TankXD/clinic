@@ -1,0 +1,16 @@
+@use "../global/" as g;
+
+.p-footer__copyright {
+  background-color: g.$color-blue;
+  padding-top: 18px;
+  padding-bottom: 73px;
+  text-align: center;
+  small {
+    color: #fff;
+  }
+
+  @include g.mq(xl) {
+    padding-top: 16px;
+    padding-bottom: 18px;
+  }
+}

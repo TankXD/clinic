@@ -1,0 +1,17 @@
+@use "../global/" as g;
+
+.l-footer {
+  padding-top: 13px;
+  background-color: g.$color-l-blue;
+  @include g.mq(lg) {
+    padding-top: 56px;
+  }
+}
+
+.l-footer__inner {
+  padding-inline: 10px;
+}
+
+.l-footer__copyright {
+  margin-top: 60px;
+}

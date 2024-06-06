@@ -1,0 +1,12 @@
+@use "../global/" as g;
+
+.p-breadcrumb {
+  font-size: 12px;
+  span:first-child span {
+    color: #c2c2c2;
+    padding-right: 6.5px;
+  }
+  span:not(:first-child) span {
+    padding-inline: 6.5px;
+  }
+}

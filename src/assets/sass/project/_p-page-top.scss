@@ -1,0 +1,74 @@
+@use "../global/" as g;
+
+// page top section
+
+.p-page-top {
+  padding-inline: g.$padding-inline-sp;
+  margin-top: 80px;
+
+  @include g.mq(md) {
+    padding-inline: g.$padding-inline-pc;
+    margin-top: 120px;
+  }
+  @include g.mq(lg) {
+    padding-inline: g.$padding-inline-pc-l;
+  }
+}
+.p-page-top__inner {
+  height: 188px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  @include g.mq(md) {
+    height: 340px;
+  }
+
+  &::before {
+    position: absolute;
+    inset: 0 0 0 0;
+    content: "";
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .p-page-top__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+}
+
+.p-page-top__text-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.p-page-top__title {
+  color: #fff;
+  font-size: g.$fz-xl;
+  font-weight: g.$fw-bold;
+  letter-spacing: 4.8px;
+  @include g.mq(md) {
+    font-size: 32px;
+    letter-spacing: 3.2px;
+  }
+}
+
+.p-page-top__sub-title {
+  margin-top: 14px;
+  color: #fff;
+  font-size: g.$fz-xs;
+  font-weight: g.$fw-bold;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  @include g.mq(md) {
+    margin-top: 16px;
+    font-size: g.$fz-sm;
+    letter-spacing: 1.4px;
+  }
+}

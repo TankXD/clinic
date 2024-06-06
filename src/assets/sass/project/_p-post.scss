@@ -1,0 +1,246 @@
+@use "../global" as g;
+
+.p-post__content {
+}
+
+.p-post__title {
+  font-size: g.$fz-lg;
+  font-weight: g.$fw-bold;
+  line-height: 32px;
+  letter-spacing: 1.6px;
+  @include g.mq(md) {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 2.24px;
+  }
+}
+
+.p-post__meta {
+  margin-top: 16px;
+  @include g.mq(md) {
+    margin-top: 20px;
+  }
+}
+
+.p-post__meta--date {
+  color: g.$color-blue;
+  font-size: g.$fz-md;
+  position: relative;
+  padding-left: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: url("../img/single/icon-time.svg") no-repeat center / contain;
+  }
+}
+
+.p-post__meta--category {
+  margin-left: 32px;
+  display: inline-block;
+  color: #fff;
+  font-size: g.$fz-xxs;
+  background-color: g.$color-blue;
+  padding: 6px 12px;
+  border-radius: 12px;
+}
+
+.p-post__body {
+  margin-top: 56px;
+  @include g.mq(md) {
+    margin-top: 48px;
+  }
+  p {
+    line-height: 24px;
+    & + & {
+      margin-top: 24px;
+    }
+  }
+  a {
+    color: g.$color-blue;
+    line-height: 24px;
+    text-decoration-line: underline;
+  }
+  h2 {
+    margin-top: 56px;
+    border-left: 6px solid g.$color-blue;
+    padding-block: 7px 6px;
+    padding-left: 16px;
+    color: g.$color-blue;
+    font-size: 18px;
+    font-weight: g.$fw-bold;
+    letter-spacing: 1.44px;
+    @include g.mq(md) {
+      font-size: 24px;
+      letter-spacing: 1.92px;
+      padding-block: 7px;
+    }
+    & + p {
+      margin-top: 16px;
+      @include g.mq(md) {
+        margin-top: 20px;
+      }
+    }
+  }
+  .wp-block-image {
+    margin-top: 20px;
+    margin-bottom: 0;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      aspect-ratio: 335/209;
+    }
+  }
+
+  h3 {
+    margin-top: 40px;
+    color: g.$color-blue;
+    font-size: g.$fz-md;
+    font-weight: g.$fw-bold;
+    letter-spacing: 1.28px;
+    padding-bottom: 4px;
+    border-bottom: g.$color-blue 1px solid;
+    & + p {
+      margin-top: 16px;
+    }
+    @include g.mq(md) {
+      color: g.$color-blue;
+      font-size: 20px;
+      letter-spacing: 1.6px;
+      padding-bottom: 5px;
+      & + p {
+        margin-top: 20px;
+      }
+    }
+  }
+  h4 {
+    margin-top: 56px;
+    color: g.$color-blue;
+    font-weight: 700;
+    font-weight: g.$fw-bold;
+    letter-spacing: 1.12px;
+    & + p {
+      margin-top: 16px;
+    }
+    @include g.mq(md) {
+      font-size: 16px;
+      letter-spacing: 1.28px;
+      & + p {
+        margin-top: 20px;
+      }
+    }
+  }
+  ul {
+    margin-top: 12px;
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: 14px;
+    li {
+      font-size: g.$fz-md;
+      line-height: 30px;
+      //2번째 li랑 간격주고싶은건데 li는 이렇게 해도 상관없음
+      //어차피 첫번째 li의 마진은 ul에 margin-top과 겹쳐져서 의미없어짐
+      margin-top: 4px;
+    }
+  }
+}
+
+// post pagination link
+.p-post__links {
+  margin-top: 37px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  @include g.mq(md) {
+    margin-top: 76px;
+  }
+}
+
+.p-post__links--prev,
+.p-post__links--next {
+  color: #fff;
+  width: 108px;
+  padding-block: 9px;
+  border-radius: 4px;
+  background-color: g.$color-blue;
+  position: relative;
+  line-height: 21px;
+  font-size: 14px;
+  margin-block: 1px 1px;
+  @include g.mq(md) {
+    width: 124px;
+    padding-block: 7px 8px;
+    margin-block: 3px 2px;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease;
+  }
+}
+
+.p-post__links--prev {
+  padding-inline: 37px 15px;
+  text-align: right;
+  @include g.mq(md) {
+    padding-inline: 38px 16px;
+  }
+  &::before {
+    background: url("../img/pagination/pagination-left.svg") no-repeat center / contain;
+    left: 15px;
+    @include g.mq(md) {
+      left: 16px;
+    }
+  }
+  &:hover {
+    &::before {
+      left: 13px;
+    }
+  }
+}
+.p-post__links--next {
+  padding-inline: 15px 37px;
+  text-align: left;
+  @include g.mq(md) {
+    padding-inline: 16px 38px;
+  }
+  &::before {
+    background: url("../img/pagination/pagination-right.svg") no-repeat center / contain;
+    right: 15px;
+    @include g.mq(md) {
+      right: 16px;
+    }
+  }
+  &:hover {
+    &::before {
+      right: 13px;
+    }
+  }
+}
+
+.p-post__links--archive {
+  color: g.$color-blue;
+  border: 1px solid g.$color-blue;
+  width: 95px;
+  padding-block: 9px;
+  text-align: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  @include g.mq(md) {
+    width: 90px;
+    // padding-block: 10px;
+  }
+  &:hover {
+    background-color: g.$color-blue;
+    color: #fff;
+  }
+}

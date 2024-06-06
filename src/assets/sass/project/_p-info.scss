@@ -1,0 +1,125 @@
+@use "../global/" as g;
+
+// news 전체레이아웃
+.p-info__news {
+  width: 100%;
+  max-width: 670px;
+  @include g.mq(lg) {
+    max-width: 542px;
+  }
+}
+// news title-wrap
+.p-info__news__title-wrap {
+  margin-top: 39px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include g.mq(lg) {
+    margin-top: 18px;
+  }
+}
+
+.p-info__news__head {
+  padding-left: 15px;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  @include g.mq(lg) {
+    padding-left: 12px;
+  }
+}
+
+.p-info__news__title {
+  font-size: g.$fz-lg;
+  font-weight: g.$fw-bold;
+  letter-spacing: 1.3px;
+  @include g.mq(lg) {
+    letter-spacing: 2px;
+  }
+}
+
+.p-info__news__sub-title {
+  color: g.$color-blue;
+  font-size: g.$fz-xxs;
+  font-weight: g.$fw-bold;
+  letter-spacing: 1.1px;
+  @include g.mq(lg) {
+    font-size: g.$fz-xs;
+    letter-spacing: 1.2px;
+  }
+}
+
+.p-info__news__list {
+  a {
+    color: g.$color-gray;
+    font-size: g.$fz-xxs;
+    border-bottom: 1px solid g.$color-gray;
+    @include g.mq(lg) {
+      font-size: g.$fz-xs;
+    }
+  }
+}
+//
+
+// news article
+.p-info__news__article {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  padding-block: 11px;
+  padding-inline: 6px 5px;
+  border-block: 1px solid g.$base-color;
+  position: relative;
+  transition: all 0.3s ease;
+  @include g.mq(lg) {
+    margin-top: 7px;
+    padding-block: 8px 9px;
+    padding-inline: 12px;
+  }
+  &::after {
+    transition: all 0.3s ease;
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url("../img/common/icon-arrow-black.svg") no-repeat center / contain;
+    @include g.mq(lg) {
+      right: 8px;
+    }
+  }
+}
+.p-info__news__article:hover {
+  color: g.$color-blue;
+  &::after {
+    right: 2px;
+    filter: invert(44%) sepia(29%) saturate(3219%) hue-rotate(181deg) brightness(96%) contrast(90%);
+  }
+}
+
+.p-info__news__time {
+  font-size: g.$fz-xs;
+}
+
+.p-info__news__article-title {
+  font-size: g.$fz-sm;
+}
+//
+
+//info time table
+.p-info__time-table {
+  margin-top: -24px;
+  max-width: 670px;
+  @include g.mq(lg) {
+    margin-top: -35px;
+    max-width: 477px;
+    margin-left: 59px;
+  }
+  img {
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}

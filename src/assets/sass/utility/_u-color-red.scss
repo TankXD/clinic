@@ -1,0 +1,5 @@
+@use "../global/" as g;
+
+.u-color-red {
+  color: g.$color-red;
+}

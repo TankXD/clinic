@@ -1,0 +1,62 @@
+@use "../global/" as g;
+
+.p-footer__nav {
+  margin-top: 59px;
+  display: flex;
+  padding-inline: 10px;
+  flex-direction: column;
+  gap: 38px;
+  @include g.mq(lg) {
+    margin-top: 43px;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+  }
+}
+
+.p-footer__nav-item {
+}
+
+.p-footer-item__title {
+  font-size: g.$fz-md;
+  font-weight: g.$fw-bold;
+  line-height: 24px;
+  display: inline-block;
+}
+
+.p-footer-nav__link-list__wrap {
+  display: flex;
+  gap: 20px;
+}
+
+.p-footer-nav__link-list {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.p-footer-nav__link {
+  font-size: g.$fz-md;
+  position: relative;
+  padding-left: 12px;
+  line-height: 24px;
+  transition: 0.2s all ease;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url("../img/common/arrow-right-blue.svg") no-repeat center center / contain;
+  }
+}
+
+// hover
+.p-footer-nav__link:hover {
+  opacity: 0.8;
+}
+
+// hover

@@ -1,0 +1,13 @@
+@use "../global/" as g;
+
+.p-about-gallery__photos {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 11px;
+  @include g.mq(md) {
+    margin-top: 60px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
